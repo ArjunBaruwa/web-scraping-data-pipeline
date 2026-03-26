@@ -1,34 +1,22 @@
 # Web Scraping & Data Pipeline Project
 
 ## Overview
-
-This project extracts structured data from web sources and processes it into a usable format using Python. It demonstrates a complete data pipeline including extraction, transformation, and storage.
+This project extracts GDP data of countries from a Wikipedia archive page, transforms it, and loads it into a CSV file and SQLite database. It demonstrates a full ETL pipeline with logging, data cleaning, and storage.
 
 ## Tech Stack
-
-Python, BeautifulSoup, Pandas, NumPy, SQLite
+Python | BeautifulSoup | Pandas | SQLite | CSV
 
 ## Features
-
-* Extracts data from websites using web scraping techniques
-* Cleans and transforms raw data into structured format
-* Stores processed data in SQLite database
-* Exports final dataset into CSV format
-* Implements logging for tracking execution and errors
-
-## Project Structure
-
-* scraper.py → Handles data extraction
-* data_cleaning.py → Cleans and transforms data
-* database.py → Stores data in SQLite
-* output.csv → Final processed dataset
+- Extracts GDP data from web pages using web scraping
+- Cleans and transforms raw data (removes commas, converts to billions)
+- Loads data into CSV and SQLite database
+- Logs progress and errors
+- Queries database for filtered data
 
 ## How to Run
-
-1. Install dependencies: pip install -r requirements.txt
-2. Run the scraper script
-3. Process and store data
+1. Install dependencies: `pip install -r requirements.txt`
+2. Run the script: `python etl_pipeline.py`
+3. Output CSV and database will be created in the same folder
 
 ## Outcome
-
-Built an end-to-end data pipeline simulating real-world data engineering workflows.
+This project demonstrates a real-world ETL workflow from web data extraction to storage, including transformation and logging.
